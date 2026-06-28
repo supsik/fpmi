@@ -27,13 +27,8 @@
 					<h3>Напишите нам</h3>
 					<ul>
 						<li>
-							<a href="" aria-label="Наш вк канал">
+							<a href="https://vk.com/boliev_ir" aria-label="Наш вк">
 								<IconsVK />
-							</a>
-						</li>
-						<li>
-							<a href="" aria-label="Наш телеграм канал">
-								<IconsTelegram />
 							</a>
 						</li>
 					</ul>
