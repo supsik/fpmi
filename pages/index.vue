@@ -3,6 +3,7 @@
 		<Hero />
 		<AboutUs />
 		<WhyUs />
+		<InfoBlock />
 		<FAQ />
 		<LayoutFooter />
 	</div>
