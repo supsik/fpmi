@@ -3,7 +3,7 @@
 		<div>
 			<h2>Частые вопросы</h2>
 			<div class="faq__content">
-				<div class="faq__item" v-for="item in data" @click="toggleItem">
+				<div class="faq__item" v-for="item in data" :key="item.question" @click="toggleItem">
 					<button class="faq__question">
 						<div class="faq__toggle-icon">
 							<span />
