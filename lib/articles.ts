@@ -4,14 +4,19 @@ interface BaseArticleType {
   title       : string;
   description : string;
   image       : string;
-}
+};
 
 interface OutsourceArticleType extends BaseArticleType {
   type: 'outsource';
   link: string;
+};
+
+export interface SelfArticleType extends BaseArticleType {
+  type    : 'self';
+  content : string;
 }
 
-export type ArticleType = BaseArticleType | OutsourceArticleType;
+export type ArticleType = BaseArticleType | OutsourceArticleType | SelfArticleType;
 
 const articles: ArticleType[] = [
   {
@@ -22,6 +27,32 @@ const articles: ArticleType[] = [
     image       : '/images/articles/article1.png',
     type        : 'outsource',
     link        : 'https://dzen.ru/a/aoLRGwxpEg9wSO8h',
+  },
+  {
+    id          : 1,
+    date        : '16.11.2026',
+    title       : 'Объединяя усилия ради будущего Осетии',
+    description : 'Сегодня мы сделали значительный шаг вперёд в деле развития и поддержки молодого поколения нашей республики. Фонд «Во славу Осетии» и Комитет по делам молодёжи РСО-Алания подписали соглашение о сотрудничестве.',
+    image       : '/images/articles/article2/article2-1.webp',
+    type        : 'self',
+    content     : `
+      <p>Сегодня мы сделали значительный шаг вперёд в деле развития и поддержки молодого поколения нашей республики. Фонд «Во славу Осетии» и Комитет по делам молодёжи РСО-Алания подписали соглашение о сотрудничестве.</p>
+      <p>Для нас это не просто документ, а подтверждение общего вектора работы, направленного на создание крепкого фундамента для будущего Осетии. Мы объединяем усилия, чтобы инициативы молодых, талантливых людей находили реальную поддержку, а проекты, важные для общества, получали новый импульс к развитию.</p>
+      <p>От всей души хочу выразить сердечную благодарность Председателю Комитета по делам молодёжи РСО-Алания Дзгоеву Станиславу Зелимхановичу. Станислав Зелимханович, спасибо Вам за оказанное доверие, за веру в плодотворное и долгосрочное сотрудничество. Ваша открытость и искреннее желание поддерживать молодёжь вселяют уверенность в том, что наши совместные начинания будут успешными и принесут пользу родной земле.</p>
+      <p>Мы продолжим работать во славу Осетии — вдохновляя, поддерживая и создавая возможности для тех, кому предстоит строить будущее нашего народа. Впереди много важных дел и ярких проектов!</p>
+      <div class="images-content">
+        <img src="/images/articles/article2/article2-1.webp" alt="article2-1">
+        <img src="/images/articles/article2/article2-2.webp" alt="article2-2">
+      </div>
+      <ul class="tags">
+        <li>#ВоCлавуОсетии</li>
+        <li>#МолодёжьОсетии</li>
+        <li>#РСОАлания</li>
+        <li>#Сотрудничество</li>
+        <li>#ФондВоCлавуОсетии</li>
+        <li>#БудущееОсетии</li>
+      </ul>
+    `,
   },
 ];
 

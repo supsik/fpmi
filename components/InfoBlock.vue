@@ -34,6 +34,7 @@
 
   img {
     border-radius: 100%;
+    margin: auto;
   }
 
   @media (max-width: 768px) {
