@@ -27,7 +27,7 @@ import articles from '~/lib/articles';
 import 'swiper/css';
 
 const swiperOptions = {
-  slidesPerView : 3.35,
+  slidesPerView : 'auto',
   spaceBetween  : 42,
 };
 
@@ -48,6 +48,7 @@ const shortDescription = desc => {
     width: 100%;
 
     .swiper-slide a {
+      width: 400px;
       display: block;
       padding: 16px 16px 20px;
       background-color: #EFEFEF;
@@ -92,7 +93,69 @@ const shortDescription = desc => {
         font-size: 22px;
         font-weight: 500;
       }
+      
+      @media (max-width: 1024px) {
+        width: 320px;
+        padding: 12px 12px 16px;
+
+        .article__short-description {
+          font-size: 13px;
+        }
+
+        .article__bottom-side {
+          p {
+            font-size: 16px;
+          }
+        }
+
+        img {
+          height: 200px;
+        }
+
+        h2 {
+          font-size: 18px;
+          margin-top: 6px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        width: 40%;
+        min-width: 220px;
+        border-radius: 14px;
+        padding: 10px 10px 12px;
+
+        .article__short-description {
+          font-size: clamp(0.625rem, 0.3987rem + 0.8621vw, 0.8125rem);
+        }
+
+        .article__bottom-side {
+          p {
+            font-size: clamp(0.75rem, 0.4483rem + 1.1494vw, 1rem);
+          }
+
+          div {
+            font-size: 10px;
+
+            svg {
+              width: 10px;
+            }
+          }
+        }
+
+        img {
+          height: 25%;
+          border-radius: 10px;
+        }
+
+        h2 {
+          font-size: clamp(0.9375rem, 0.7112rem + 0.8621vw, 1.125rem);
+        }
+      }
     }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 32px;
   }
 }
 </style>
